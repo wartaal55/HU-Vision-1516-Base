@@ -18,21 +18,6 @@ IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other)
 	//TODO: Create a copy from the other object
 }
 
-IntensityImageStudent::IntensityImageStudent(const RGBImageStudent &other) : IntensityImage(other.getWidth(), other.getHeight()) {
-	pixelStorage = new int*[other.getWidth()];
-	for (int x = 0; x < other.getWidth(); x++)
-	{
-		pixelStorage[x] = new int[other.getHeight()];
-		for (int y = 0; y < other.getHeight(); y++)
-		{
-			//convert rgb - > intensity
-			RGB tempRGB = other.getPixel(x,y);
-			pixelStorage[x][y] = int((tempRGB.r + tempRGB.g + tempRGB.b)/3);
-		}
-	}
-	//TODO: Create a copy from the other object
-}
-
 IntensityImageStudent::IntensityImageStudent(const int width, const int height) : IntensityImage(width, height) {
 	pixelStorage = new int*[getWidth()];
 	for (int x = 0; x < getWidth(); x++)
