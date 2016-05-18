@@ -14,7 +14,6 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 		}
 	}
 
-
 	return pixelStorage;
 }
 
